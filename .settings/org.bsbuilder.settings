@@ -1,0 +1,5 @@
+basePackage=com.samplex
+secureCodeEnabled=false
+useMongo=true
+uiType=Angular4
+prepForOracle=false

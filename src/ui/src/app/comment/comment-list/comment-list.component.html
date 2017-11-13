@@ -1,0 +1,33 @@
+<table class="table">
+  <thead>
+    <tr>
+    <th>Select</th>
+        <th>commentId</th>
+        <th>commentAction</th>
+        <th>commentResult</th>
+        <th>commentDateTime</th>
+        <th>commentLastName</th>
+        <th>commentTextHeader</th>
+        <th>commentTextDetail</th>
+        </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let comment of listOfComments">
+      <td><a routerLink="/comment/{{comment.commentId}}">X</a> </td>
+            <td>{{comment.commentId}}</td>
+            <td>{{comment.commentAction}}</td>
+            <td>{{comment.commentResult}}</td>
+            <td>{{comment.commentDateTime}}</td>
+            <td>{{comment.commentLastName}}</td>
+            <td>{{comment.commentTextHeader}}</td>
+            <td>{{comment.commentTextDetail}}</td>
+          </tr>
+  </tbody>
+</table>
+<div class="col-md-12">
+  <ul class="pager">
+    <li *ngIf="currentPage > 1"><a  (click)="previousPage()">Previous</a></li>
+    <li *ngIf="currentPage < lastPage"><a  (click)="nextPage()">Next</a></li>
+  </ul>
+</div>
+
